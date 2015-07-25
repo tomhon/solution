@@ -1,7 +1,7 @@
 /* Reset and define common styles */
 * { box-sizing: border-box; -moz-box-sizing: border-box; margin: 0; padding: 0; }
 /*body { font-family: Arial, Helvetica; background-color: #e0e0e0; }*/
-body { font-family: Arial, Helvetica; background-color: red; }
+body { font-family: Arial, Helvetica; background-color: rosybrown; }
 button { border: 1px solid #999; color: #555; background-color: #F4F4FA; padding: 0 10px; }
 button:hover { background-color: white; }
 input[type=text], input:not([type]) { padding: 0 10px; text-overflow: ellipsis; }
