@@ -27,7 +27,8 @@ header h2 { text-transform: uppercase; font-weight: normal; color: white; font-s
 
 /* Textboxes in list of items */
 #todo-items li div { overflow: hidden; padding: 5px 2px; }
-.item-text { width: 100%; height: 26px; line-height: 24px; border: 1px solid transparent; background-color: transparent; }
+.item-text { width: 50%; height: 26px; line-height: 24px; border: 1px solid transparent; background-color: transparent; }
+.item-assigned { width: 50%; height: 26px; line-height: 24px; border: 1px solid transparent; background-color: transparent; }
 .item-text:focus, .item-text:hover { border-color: #aaa; background-color: #FFC; }
 
 /* Footer */

@@ -13,7 +13,10 @@ $(function() {
                     .attr('data-todoitem-id', item.id)
                     .append($('<button class="item-delete">Delete</button>'))
                     .append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete))
-                    .append($('<div>').append($('<input class="item-text">').val(item.text)));
+                    .append($('<div>')
+                    .append($('<input class="item-text">').val(item.text))
+                    .append($('<input class="item-assigned">').val(item.assigned))
+                );
             });
 
             $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
@@ -34,8 +37,11 @@ $(function() {
     $('#add-item').submit(function(evt) {
         var textbox = $('#new-item-text'),
             itemText = textbox.val();
+        var assignedbox =$('#new-assigned-text'),    
+            itemAssigned = assignedbox.val();
+        console.log(itemText, itemAssigned);
         if (itemText !== '') {
-            todoItemTable.insert({ text: itemText, complete: false }).then(refreshTodoItems, handleError);
+            todoItemTable.insert({ text: itemText, complete: false, assigned: itemAssigned }).then(refreshTodoItems, handleError);
         }
         textbox.val('').focus();
         evt.preventDefault();
